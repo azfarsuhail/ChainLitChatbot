@@ -38,10 +38,10 @@ async def start():
     cl.user_session.set("chat_history", [])
 
     cl.user_session.set("config", config)
-    agent: Agent = Agent(name="Assistant", instructions="You are a helpful assistant", model=model)
+    agent: Agent = Agent(name="Assistant", instructions="You are a helpful coding assistant", model=model)
     cl.user_session.set("agent", agent)
 
-    await cl.Message(content="Welcome to the Azfar Suhail AI Assistant! How can I help you today?").send()
+    await cl.Message(content="Welcome to the Azfar Suhail Coding AI Assistant! How can I help you today?").send()
 
 @cl.on_message
 async def main(message: cl.Message):
